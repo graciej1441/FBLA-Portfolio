@@ -3,61 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace Jackson's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Styles for animations and layout */
-        body { margin: 0; font-family: Arial, sans-serif; }
-        .hero { background-image: url('grace-jackson.jpg'); height: 100vh; background-size: cover; text-align: center; color: white; }
-        .section { padding: 50px; }
-        /* Add other styles here for about, resume, etc. */
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my work and journey.</p>
-    </div>
-
-    <div class="section" id="about">
-        <h2>About Me</h2>
-        <p>I am Grace Jackson, a passionate developer...</p>
-    </div>
-
-    <div class="section" id="career-research">
-        <h2>Career Research</h2>
-        <p>Information about potential careers...</p>
-    </div>
-
-    <div class="section" id="resume">
-        <h2>Resume</h2>
-        <iframe src="resume.pdf" width="100%" height="600px"></iframe>
-    </div>
-
-    <div class="section" id="career-roadmap">
-        <h2>Career Roadmap</h2>
-        <p>Here is my roadmap...</p>
-    </div>
-
-    <div class="section" id="skills">
-        <h2>Skills</h2>
-        <div class="grid">
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JavaScript</div>
-            <div>React</div>
-            <!-- Add other skills here -->
+    <nav>
+        <h1>Grace Jackson's Portfolio</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#career-research">Career Research</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#roadmap">Career Roadmap</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <img src="grace-jackson.jpg" alt="Grace Jackson">
+        <h2>Welcome to My Portfolio</h2>
+    </section>
+    <section id="about">
+        <h3>About Me</h3>
+        <p>Information about Grace Jackson including education, interests, and goals.</p>
+    </section>
+    <section id="career-research">
+        <h3>Career Research</h3>
+        <div class="grid-cards">
+            <div class="card">Card Content 1</div>
+            <div class="card">Card Content 2</div>
+            <div class="card">Card Content 3</div>
+            <div class="card">Card Content 4</div>
         </div>
-    </div>
-
-    <div class="section" id="conclusion">
-        <h2>Conclusion</h2>
+    </section>
+    <section id="resume">
+        <h3>Resume</h3>
+        <embed src="resume.pdf" type="application/pdf" width="100%" height="600px">
+    </section>
+    <section id="roadmap">
+        <h3>Career Roadmap</h3>
+        <p>Information regarding career roadmap and future goals.</p>
+    </section>
+    <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-skills">
+            <div class="skill">Skill 1</div>
+            <div class="skill">Skill 2</div>
+            <div class="skill">Skill 3</div>
+        </div>
+    </section>
+    <section id="conclusion">
+        <h3>Conclusion</h3>
         <p>Thank you for visiting my portfolio.</p>
-    </div>
-
-    <script>
-        // Add scroll animations and effects here
-    </script>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
