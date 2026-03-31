@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace Jackson | Career Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+section {
+  padding: 80px 50px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero img {
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(30,41,59,0.7);
+  padding: 25px;
+  border-radius: 18px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.timeline {
+  border-left: 3px solid #38bdf8;
+  padding-left: 20px;
+}
+
+timeline div {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: black;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Grace Jackson</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#career">Career</a>
+    <a href="#resume">Resume</a>
+    <a href="#education">Roadmap</a>
+    <a href="#skills">Skills</a>
+  </div>
+</nav>
+
+<section class="hero visible">
+  <div>
+    <h1>Future Psychiatric Nurse Practitioner</h1>
+    <p>Advocating for mental health through compassionate, evidence-based care.</p>
+  </div>
+  <img src="your-photo.jpg">
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Dual enrollment student pursuing a CNA license with 500+ service hours. I combine leadership, healthcare training, and advocacy to prepare for a future in psychiatric nursing.</p>
+</section>
+
+<section id="career">
+  <h2>Career Research</h2>
+  <div class="grid">
+    <div class="card"><h3>Role</h3><p>Assess, diagnose, and treat mental illness using therapy and medication.</p></div>
+    <div class="card"><h3>Salary</h3><p>$130,000+ median annually</p></div>
+    <div class="card"><h3>Growth</h3><p>38% job growth (extremely high demand)</p></div>
+    <div class="card"><h3>Challenges</h3><p>Emotional intensity, burnout risk, and complex cases require resilience.</p></div>
+  </div>
+
+  <p><strong>Why Me?</strong> My leadership, ASL fluency, CNA training, and advocacy work directly prepare me to meet the growing demand in mental healthcare.</p>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p>(Your full resume is embedded below)</p>
+
+  <iframe src="resume.pdf" width="100%" height="500px"></iframe>
+
+  <br><br>
+  <a href="resume.pdf" download>
+    <button>Download Resume</button>
+  </a>
+</section>
+
+<section id="education">
+  <h2>Career Roadmap</h2>
+  <div class="timeline">
+    <div><strong>BSN (4 yrs)</strong> - Nursing foundation</div>
+    <div><strong>RN License</strong> - Clinical experience</div>
+    <div><strong>MSN/DNP</strong> - Advanced psychiatric training</div>
+    <div><strong>Board Certification</strong></div>
+    <div><strong>Licensed Practice</strong></div>
+  </div>
+
+  <p><strong>Goal:</strong> Rice University → Baylor College of Medicine</p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Certifications</h2>
+  <div class="grid">
+    <div class="card">ASL Fluency</div>
+    <div class="card">CPR / First Aid</div>
+    <div class="card">Leadership</div>
+    <div class="card">Critical Thinking</div>
+    <div class="card">Empathy & Communication</div>
+    <div class="card">Healthcare Training</div>
+  </div>
+</section>
+
+<section>
+  <h2>Conclusion</h2>
+  <p>I am prepared, driven, and committed to making a measurable impact in mental healthcare.</p>
+</section>
+
+<footer>
+  FBLA Career Portfolio | Grace Jackson
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("visible");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
